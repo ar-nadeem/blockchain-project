@@ -1,0 +1,411 @@
+{
+  "contractName": "Balance",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getAddressBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getAddressBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Balance.sol\":\"Balance\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Balance.sol\":{\"keccak256\":\"0xe4c67a73ae015f0bb7b03681279b3707b01c485043e3728859d9b9f9b4191379\",\"urls\":[\"bzz-raw://e415daa8fed72bf749e578a883adb8d98e90ef4ee8898eea377d113e46b66a8a\",\"dweb:/ipfs/Qmd8btKoUkkKJZN1MAgjp4LJCmD8AnScDt3WKqSSpHgCAw\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060d88061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633504672214602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff1631905091905056fea265627a7a7231582051471c6f67b2d7ca4be3915ec791f528b3f58a7b6ee907cd8708713b82d7ce3064736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633504672214602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff1631905091905056fea265627a7a7231582051471c6f67b2d7ca4be3915ec791f528b3f58a7b6ee907cd8708713b82d7ce3064736f6c63430005100032",
+  "sourceMap": "37:201:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:201:0;;;;;;;",
+  "deployedSourceMap": "37:201:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:201:0;;;;;;;;;;;;;;;;;;;119:114;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;119:114:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;185:4;209:8;:16;;;202:23;;119:114;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.8.20;\r\n\r\ncontract Balance {\r\n    // Function to get the balance of a specific address\r\n    function getAddressBalance(address _address) public view returns (uint) {\r\n        return _address.balance;\r\n    }\r\n\r\n}\r\n",
+  "sourcePath": "E:\\Github\\blockchain-project\\dapp\\contracts\\Balance.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Balance.sol",
+    "exportedSymbols": {
+      "Balance": [
+        13
+      ]
+    },
+    "id": 14,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 13,
+        "linearizedBaseContracts": [
+          13
+        ],
+        "name": "Balance",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "191:42:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 8,
+                      "name": "_address",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "209:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "209:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7,
+                  "id": 10,
+                  "nodeType": "Return",
+                  "src": "202:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddressBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "name": "_address",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "146:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "145:18:0"
+            },
+            "returnParameters": {
+              "id": 7,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "185:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:6:0"
+            },
+            "scope": 13,
+            "src": "119:114:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 14,
+        "src": "37:201:0"
+      }
+    ],
+    "src": "0:240:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Balance.sol",
+      "exportedSymbols": {
+        "Balance": [
+          13
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.8",
+            ".20"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:33:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            13
+          ],
+          "name": "Balance",
+          "scope": 14
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getAddressBalance",
+              "scope": 13,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_address",
+                      "scope": 12,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2,
+                        "name": "ElementaryTypeName",
+                        "src": "146:7:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "VariableDeclaration",
+                    "src": "146:16:0"
+                  }
+                ],
+                "id": 4,
+                "name": "ParameterList",
+                "src": "145:18:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 12,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 5,
+                        "name": "ElementaryTypeName",
+                        "src": "185:4:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "VariableDeclaration",
+                    "src": "185:4:0"
+                  }
+                ],
+                "id": 7,
+                "name": "ParameterList",
+                "src": "184:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 7
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "balance",
+                          "referencedDeclaration": null,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 3,
+                              "type": "address",
+                              "value": "_address"
+                            },
+                            "id": 8,
+                            "name": "Identifier",
+                            "src": "209:8:0"
+                          }
+                        ],
+                        "id": 9,
+                        "name": "MemberAccess",
+                        "src": "209:16:0"
+                      }
+                    ],
+                    "id": 10,
+                    "name": "Return",
+                    "src": "202:23:0"
+                  }
+                ],
+                "id": 11,
+                "name": "Block",
+                "src": "191:42:0"
+              }
+            ],
+            "id": 12,
+            "name": "FunctionDefinition",
+            "src": "119:114:0"
+          }
+        ],
+        "id": 13,
+        "name": "ContractDefinition",
+        "src": "37:201:0"
+      }
+    ],
+    "id": 14,
+    "name": "SourceUnit",
+    "src": "0:240:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3A63d0a7c2E79318D3Ae02Ad38e2DE6AC8297b33",
+      "transactionHash": "0x0b8a64af22f56b14cb08a840b76438fd2909d441bee8be02b7920db70a7d67b4"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-04-25T07:20:25.785Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
