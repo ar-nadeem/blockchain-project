@@ -15,6 +15,9 @@ module.exports = {
     displayPrefix: ' :', // defaults to ""
     preventConsoleLogMigration: true, // defaults to false
   },
+  gas: 2100000,
+  gasPrice: 8000000000,
+
 
   compilers: {
     solc: {

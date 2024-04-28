@@ -4,16 +4,16 @@ import SignUp from "../buttons/signup";
 import SignIn from "../buttons/signin";
 import RawButton from "../buttons/rawButton";
 import { Separator } from "@/components/ui/separator"
-import { ethers } from "ethers";
-import ABI from "./ABI.json";
-
-const provider = new ethers.providers.JsonRpcProvider("http://localhost:7545"); // Assuming Ganache is running on default port
-
+import { getTotalProjects,createNewProject,contribute,getProject } from "@/contractCalls";
 
 export default function Home() {
-  const contractAddress = '0xEB393613Eff6030A99b5958b0A54A41C2007E54A';
-  const contractABI = ABI;
-  const contract = new ethers.Contract(contractAddress, contractABI, provider);
+
+
+
+  
+  
+
+
   
   return (
     <div className='bg-black h-screen w-full'>
@@ -29,7 +29,12 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center pt-10 gap-5">
-            <RawButton title="Create a new project" func={()=>{console.log("hello")}} />
+            <RawButton title="Get total projects" func={()=>{getTotalProjects()}} />
+            <RawButton title="Create new Project" func={()=>{createNewProject(100,10000)}} />
+            <RawButton title="Contribute" func={()=>{contribute(0,10000000)}} />
+            <RawButton title="Get Project" func={()=>{getProject(0)}} />
+
+
         </div>
         {/* <div className="flex justify-center pt-10 gap-5">
         <SignIn />
