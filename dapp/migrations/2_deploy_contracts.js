@@ -1,5 +1,4 @@
-var Balance = artifacts.require("Balance");
-
+var Kickstarter = artifacts.require("Kickstarter");
 module.exports = function(deployer) {
-  deployer.deploy(Balance);
+  deployer.deploy(Kickstarter);
 };

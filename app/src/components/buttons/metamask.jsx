@@ -21,12 +21,13 @@ export default function Metamask() {
       
       {connected ? (
           <div className="text text-xl">
-            Connected !
+            Connect to Metamask
           </div>
       ):
       <div className="text text-xl">
+        Connected !
 
-      Connect to Metamask
+      
       </div>}
     </Button>
   );

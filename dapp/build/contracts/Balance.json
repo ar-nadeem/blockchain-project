@@ -2,15 +2,8 @@
   "contractName": "Balance",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_address",
-          "type": "address"
-        }
-      ],
-      "name": "getAddressBalance",
+      "inputs": [],
+      "name": "getUserBalance",
       "outputs": [
         {
           "internalType": "uint256",
@@ -18,26 +11,138 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getAddressBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Balance.sol\":\"Balance\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Balance.sol\":{\"keccak256\":\"0xe4c67a73ae015f0bb7b03681279b3707b01c485043e3728859d9b9f9b4191379\",\"urls\":[\"bzz-raw://e415daa8fed72bf749e578a883adb8d98e90ef4ee8898eea377d113e46b66a8a\",\"dweb:/ipfs/Qmd8btKoUkkKJZN1MAgjp4LJCmD8AnScDt3WKqSSpHgCAw\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060d88061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80633504672214602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff1631905091905056fea265627a7a7231582051471c6f67b2d7ca4be3915ec791f528b3f58a7b6ee907cd8708713b82d7ce3064736f6c63430005100032",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80633504672214602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506082565b6040518082815260200191505060405180910390f35b60008173ffffffffffffffffffffffffffffffffffffffff1631905091905056fea265627a7a7231582051471c6f67b2d7ca4be3915ec791f528b3f58a7b6ee907cd8708713b82d7ce3064736f6c63430005100032",
-  "sourceMap": "37:201:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:201:0;;;;;;;",
-  "deployedSourceMap": "37:201:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:201:0;;;;;;;;;;;;;;;;;;;119:114;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;119:114:0;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;185:4;209:8;:16;;;202:23;;119:114;;;:::o",
-  "source": "pragma solidity >=0.4.22 <0.8.20;\r\n\r\ncontract Balance {\r\n    // Function to get the balance of a specific address\r\n    function getAddressBalance(address _address) public view returns (uint) {\r\n        return _address.balance;\r\n    }\r\n\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getUserBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Balance.sol\":\"Balance\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3},\"remappings\":[]},\"sources\":{\"project:/contracts/Balance.sol\":{\"keccak256\":\"0x2a1c1077168d7b7492c246f11a55a16972ed22449592c00b80056cafbbc96ec1\",\"urls\":[\"bzz-raw://7a1e8c339bf07555b2df33c9e51c3c242de3fd1409f4d77f288d3d1206f240f6\",\"dweb:/ipfs/QmUdnbKwAsbEMsEuzYszAwW8oL6x7BPX2hToH9HWJpZ8Vx\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50607780601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063b7013dc114602d575b600080fd5b333160405190815260200160405180910390f3fea2646970667358221220b26f47dc11a831820c14d8cdd0e2800e91fc96cdfcff2c13386e488d619b09d764736f6c634300080d0033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063b7013dc114602d575b600080fd5b333160405190815260200160405180910390f3fea2646970667358221220b26f47dc11a831820c14d8cdd0e2800e91fc96cdfcff2c13386e488d619b09d764736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:193:3",
+        "statements": [
+          {
+            "nodeType": "YulBlock",
+            "src": "6:3:3",
+            "statements": []
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "115:76:3",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "125:26:3",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "137:9:3"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "148:2:3",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "133:3:3"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "133:18:3"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "125:4:3"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "167:9:3"
+                      },
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "178:6:3"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "160:6:3"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "160:25:3"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "160:25:3"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "84:9:3",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "95:6:3",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "106:4:3",
+                "type": ""
+              }
+            ],
+            "src": "14:177:3"
+          }
+        ]
+      },
+      "contents": "{\n    { }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n}",
+      "id": 3,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "39:190:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "39:190:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;121:97;192:10;:18;121:97;;160:25:3;;;148:2;133:18;121:97:0;;;;;;",
+  "source": "pragma solidity >=0.4.22 <= 0.8.25;\r\n\r\ncontract Balance {\r\n    // Function to get the balance of a specific address\r\n    function getUserBalance() public view returns (uint) {\r\n        return msg.sender.balance;\r\n    }\r\n\r\n\r\n\r\n\r\n}\r\n",
   "sourcePath": "E:\\Github\\blockchain-project\\dapp\\contracts\\Balance.sol",
   "ast": {
     "absolutePath": "project:/contracts/Balance.sol",
     "exportedSymbols": {
       "Balance": [
-        13
+        12
       ]
     },
-    "id": 14,
+    "id": 13,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -47,121 +152,109 @@
           ">=",
           "0.4",
           ".22",
-          "<",
+          "<=",
           "0.8",
-          ".20"
+          ".25"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:33:0"
+        "src": "0:35:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
+        "canonicalName": "Balance",
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 13,
+        "id": 12,
         "linearizedBaseContracts": [
-          13
+          12
         ],
         "name": "Balance",
+        "nameLocation": "48:7:0",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 11,
+              "id": 10,
               "nodeType": "Block",
-              "src": "191:42:0",
+              "src": "174:44:0",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
                     "expression": {
-                      "argumentTypes": null,
-                      "id": 8,
-                      "name": "_address",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "209:8:0",
+                      "expression": {
+                        "id": 6,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "192:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 7,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "192:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "id": 9,
+                    "id": 8,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "memberName": "balance",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": null,
-                    "src": "209:16:0",
+                    "src": "192:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 7,
-                  "id": 10,
+                  "functionReturnParameters": 5,
+                  "id": 9,
                   "nodeType": "Return",
-                  "src": "202:23:0"
+                  "src": "185:25:0"
                 }
               ]
             },
-            "documentation": null,
-            "id": 12,
+            "functionSelector": "b7013dc1",
+            "id": 11,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "getAddressBalance",
+            "name": "getUserBalance",
+            "nameLocation": "130:14:0",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4,
+              "id": 2,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 3,
-                  "name": "_address",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 12,
-                  "src": "146:16:0",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 2,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "146:7:0",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "145:18:0"
+              "parameters": [],
+              "src": "144:2:0"
             },
             "returnParameters": {
-              "id": 7,
+              "id": 5,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 6,
+                  "id": 4,
+                  "mutability": "mutable",
                   "name": "",
+                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 12,
-                  "src": "185:4:0",
+                  "scope": 11,
+                  "src": "168:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -169,227 +262,37 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5,
+                    "id": 3,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "185:4:0",
+                    "src": "168:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "184:6:0"
+              "src": "167:6:0"
             },
-            "scope": 13,
-            "src": "119:114:0",
+            "scope": 12,
+            "src": "121:97:0",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 14,
-        "src": "37:201:0"
+        "scope": 13,
+        "src": "39:190:0",
+        "usedErrors": []
       }
     ],
-    "src": "0:240:0"
-  },
-  "legacyAST": {
-    "attributes": {
-      "absolutePath": "project:/contracts/Balance.sol",
-      "exportedSymbols": {
-        "Balance": [
-          13
-        ]
-      }
-    },
-    "children": [
-      {
-        "attributes": {
-          "literals": [
-            "solidity",
-            ">=",
-            "0.4",
-            ".22",
-            "<",
-            "0.8",
-            ".20"
-          ]
-        },
-        "id": 1,
-        "name": "PragmaDirective",
-        "src": "0:33:0"
-      },
-      {
-        "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            13
-          ],
-          "name": "Balance",
-          "scope": 14
-        },
-        "children": [
-          {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "getAddressBalance",
-              "scope": 13,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_address",
-                      "scope": 12,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 2,
-                        "name": "ElementaryTypeName",
-                        "src": "146:7:0"
-                      }
-                    ],
-                    "id": 3,
-                    "name": "VariableDeclaration",
-                    "src": "146:16:0"
-                  }
-                ],
-                "id": 4,
-                "name": "ParameterList",
-                "src": "145:18:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 12,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
-                        },
-                        "id": 5,
-                        "name": "ElementaryTypeName",
-                        "src": "185:4:0"
-                      }
-                    ],
-                    "id": 6,
-                    "name": "VariableDeclaration",
-                    "src": "185:4:0"
-                  }
-                ],
-                "id": 7,
-                "name": "ParameterList",
-                "src": "184:6:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "functionReturnParameters": 7
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "member_name": "balance",
-                          "referencedDeclaration": null,
-                          "type": "uint256"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 3,
-                              "type": "address",
-                              "value": "_address"
-                            },
-                            "id": 8,
-                            "name": "Identifier",
-                            "src": "209:8:0"
-                          }
-                        ],
-                        "id": 9,
-                        "name": "MemberAccess",
-                        "src": "209:16:0"
-                      }
-                    ],
-                    "id": 10,
-                    "name": "Return",
-                    "src": "202:23:0"
-                  }
-                ],
-                "id": 11,
-                "name": "Block",
-                "src": "191:42:0"
-              }
-            ],
-            "id": 12,
-            "name": "FunctionDefinition",
-            "src": "119:114:0"
-          }
-        ],
-        "id": 13,
-        "name": "ContractDefinition",
-        "src": "37:201:0"
-      }
-    ],
-    "id": 14,
-    "name": "SourceUnit",
-    "src": "0:240:0"
+    "src": "0:231:0"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
   },
   "networks": {
     "5777": {
@@ -400,12 +303,15 @@
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-04-25T07:20:25.785Z",
-  "networkType": "ethereum",
+  "updatedAt": "2024-04-28T11:08:39.215Z",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }
