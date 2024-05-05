@@ -7,24 +7,27 @@ contract Kickstarter {
         uint currentAmount;
         uint deadline;
         bool funded;
+        string title;
         mapping(address => uint) contributions;
     }
     
     mapping(uint => Project) public projects;
     uint public numProjects;
     
-    event ProjectCreated(uint projectId, address owner, uint targetAmount, uint deadline);
+    event ProjectCreated(uint projectId, address owner, uint targetAmount, uint deadline,string title);
     event ProjectRemoved(uint projectId);
     event contributedEvent(uint amount);
     event senderEvent(address sender);
     event contractEvent(address contractAddress);
+    event FundsWithdrawn(address indexed recipient, uint amount);
+
     
     function getCurrentAmount(uint projectId) public view returns (uint) {
         return projects[projectId].currentAmount;
     }
 
 
-    function createProject(uint _targetAmount, uint _deadline) public {
+    function createProject(uint _targetAmount, uint _deadline,string memory _title) public {
         emit senderEvent(msg.sender);
         emit contractEvent(address(this));
         uint projectId = numProjects++;
@@ -33,7 +36,8 @@ contract Kickstarter {
         newProject.targetAmount = _targetAmount;
         newProject.deadline = block.timestamp + _deadline;
         newProject.funded = false;
-        emit ProjectCreated(projectId, msg.sender, _targetAmount, block.timestamp + _deadline);
+        newProject.title = _title;
+        emit ProjectCreated(projectId, msg.sender, _targetAmount, block.timestamp + _deadline,_title);
     }
     
     function contribute(uint _projectId) public payable {
@@ -46,6 +50,10 @@ contract Kickstarter {
         // Ensure some ether is sent with the transaction
         require(msg.value > 0, "No ether sent with the transaction");
 
+        // Check if the project is funded
+        if (project.currentAmount + msg.value >= project.targetAmount) {
+            project.funded = true;
+        }
 
         project.contributions[msg.sender] += msg.value;
         project.currentAmount += msg.value;
@@ -58,11 +66,13 @@ contract Kickstarter {
         Project storage project = projects[_projectId];
         require(project.owner == msg.sender, "Only project owner can withdraw funds");
         require(project.funded, "Project not yet funded");
-        require(block.timestamp >= project.deadline, "Deadline not yet passed");
+        // require(block.timestamp >= project.deadline, "Deadline not yet passed");
         
         address payable owner = payable(msg.sender);
         owner.transfer(project.currentAmount);
         project.currentAmount = 0;
+
+        emit FundsWithdrawn(msg.sender, project.currentAmount); // Emit the event
 
         
     }
