@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { MetaMaskProvider } from "@metamask/sdk-react";
+
 // if (typeof web3 !== 'undefined') {
 //   App.web3Provider = web3.currentProvider;
 //   web3 = new Web3(web3.currentProvider);

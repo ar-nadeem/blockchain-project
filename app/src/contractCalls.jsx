@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import ABI from "./ABI.json";
-const contractAddress = '0xf64e096f2a0ccE686626219d59cc5EA849abA88A';
+const contractAddress = '0x71621CD235824dB86981b28323504E8B26365094';
 
 const init = async () => {
     const provider = new ethers.providers.JsonRpcProvider("http://localhost:7545"); // Assuming Ganache is running on default port
@@ -34,6 +34,18 @@ async function getTotalProjects() {
     }
 }
 
+
+async function getProjects(no) {
+    try {
+        const contract  = await init();
+        const result = await contract.projects(no); // Remove .call(), ethers.js doesn't require it for read-only functions
+        
+        console.log('Result from contract method: ', result.toString()); // Convert BigNumber to string for display
+        return result.toString();
+    } catch (error) {
+        console.error('Error calling contract method: ', error);
+    }
+}
 
 async function createNewProject(amount,timestamp,title) {
     const overrides = {
@@ -77,18 +89,6 @@ async function contribute(projectID,price) {
     }
 } 
 
-async function getProject(projectID) {
-      
-    try {
-        const contract  = await init();
-        const result = await contract.projects(projectID,); // Remove .call(), ethers.js doesn't require it for read-only functions
-        
-        console.log('Result from contract method: ', result.toString()); // Convert BigNumber to string for display
-        return result;
-    } catch (error) {
-        console.error('Error calling contract method: ', error);
-    }
-} 
 
 async function withdraw(projectID) {
     try {
@@ -113,4 +113,4 @@ async function withdraw(projectID) {
 
 
 
-export { getTotalProjects,createNewProject,contribute,getProject,withdraw };
+export { getTotalProjects,createNewProject,contribute,withdraw,getProjects };
